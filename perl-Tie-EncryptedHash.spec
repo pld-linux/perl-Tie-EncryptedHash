@@ -1,3 +1,7 @@
+
+# Conditional build:
+%bcond_without	tests	# do not perform "make test"
+
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Tie
 %define		pnam	EncryptedHash
@@ -10,10 +14,12 @@ License:	Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	5a85bd78c74ef52aeff6c70836f9d3bf
-BuildRequires:	perl-devel >= 5.6
+%if %{with tests}
 BuildRequires:	perl-Crypt-Blowfish
 BuildRequires:	perl-Crypt-CBC
 BuildRequires:	perl-Crypt-DES
+%endif
+BuildRequires:	perl-devel >= 5.6
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -33,6 +39,8 @@ uzyskaæ bezpieczne, szyfruj±ce struktury do przechowywania danych.
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
 %{__make}
+
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
