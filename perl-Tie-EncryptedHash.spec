@@ -5,7 +5,7 @@ Summary:	Tie::EncryptedHash Perl module - hashes with encrypting fields
 Summary(pl):	Modu³ Perla Tie::EncryptedHash - hasze z kodowanymi polami
 Name:		perl-Tie-EncryptedHash
 Version:	1.21
-Release:	1
+Release:	2
 License:	Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
