@@ -19,7 +19,7 @@ BuildRequires:	perl-Crypt-Blowfish
 BuildRequires:	perl-Crypt-CBC
 BuildRequires:	perl-Crypt-DES
 %endif
-BuildRequires:	perl-devel >= 5.6
+BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
