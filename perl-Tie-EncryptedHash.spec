@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Tie
-%define	pnam	EncryptedHash
+%define		pdir	Tie
+%define		pnam	EncryptedHash
 Summary:	Tie::EncryptedHash Perl module - hashes with encrypting fields
 Summary(pl):	Modu³ Perla Tie::EncryptedHash - hasze z kodowanymi polami
 Name:		perl-Tie-EncryptedHash
