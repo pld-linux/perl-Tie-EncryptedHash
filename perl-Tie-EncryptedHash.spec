@@ -5,7 +5,7 @@ Summary:	Tie::EncryptedHash Perl module - hashes with encrypting fields
 Summary(pl):	Modu³ Perla Tie::EncryptedHash - hasze z kodowanymi polami
 Name:		perl-Tie-EncryptedHash
 Version:	1.21
-Release:	1
+Release:	2
 License:	Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -13,7 +13,7 @@ BuildRequires:	perl >= 5.6
 BuildRequires:	perl-Crypt-Blowfish
 BuildRequires:	perl-Crypt-CBC
 BuildRequires:	perl-Crypt-DES
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -29,7 +29,8 @@ uzyskaæ bezpieczne, szyfruj±ce struktury do przechowywania danych.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make}
 
 %install
@@ -44,5 +45,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README.html
-%{perl_sitelib}/Tie/EncryptedHash.pm
+%{perl_vendorlib}/Tie/EncryptedHash.pm
 %{_mandir}/man3/*
