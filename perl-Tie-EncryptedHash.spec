@@ -9,6 +9,7 @@ Release:	2
 License:	Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	5a85bd78c74ef52aeff6c70836f9d3bf
 BuildRequires:	perl-devel >= 5.6
 BuildRequires:	perl-Crypt-Blowfish
 BuildRequires:	perl-Crypt-CBC
