@@ -31,7 +31,7 @@ uzyskaæ bezpieczne, szyfruj±ce struktury do przechowywania danych.
 
 %build
 %{__perl} Makefile.PL \
-	INSTALLDIRS=vendor 
+	INSTALLDIRS=vendor
 %{__make}
 
 %install
