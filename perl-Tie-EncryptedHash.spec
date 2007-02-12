@@ -6,7 +6,7 @@
 %define		pdir	Tie
 %define		pnam	EncryptedHash
 Summary:	Tie::EncryptedHash Perl module - hashes with encrypting fields
-Summary(pl):	Modu³ Perla Tie::EncryptedHash - hasze z kodowanymi polami
+Summary(pl.UTF-8):   ModuÅ‚ Perla Tie::EncryptedHash - hasze z kodowanymi polami
 Name:		perl-Tie-EncryptedHash
 Version:	1.21
 Release:	3
@@ -28,9 +28,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Tie::EncryptedHash augments Perl hash semantics to build secure,
 encrypting containers of data.
 
-%description -l pl
-Modu³ Tie::EncryptedHash rozszerza semantykê perlowych haszy, aby
-uzyskaæ bezpieczne, szyfruj±ce struktury do przechowywania danych.
+%description -l pl.UTF-8
+ModuÅ‚ Tie::EncryptedHash rozszerza semantykÄ™ perlowych haszy, aby
+uzyskaÄ‡ bezpieczne, szyfrujÄ…ce struktury do przechowywania danych.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
