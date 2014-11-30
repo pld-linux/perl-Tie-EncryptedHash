@@ -1,10 +1,10 @@
 #
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
-#
-%include	/usr/lib/rpm/macros.perl
+
 %define		pdir	Tie
 %define		pnam	EncryptedHash
+%include	/usr/lib/rpm/macros.perl
 Summary:	Tie::EncryptedHash Perl module - hashes with encrypting fields
 Summary(pl.UTF-8):	Moduł Perla Tie::EncryptedHash - hasze z kodowanymi polami
 Name:		perl-Tie-EncryptedHash
@@ -14,6 +14,7 @@ License:	Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	da2bd8aa366c6454b168b72f2635491e
+URL:		http://search.cpan.org/dist/Tie-EncryptedHash/
 %if %{with tests}
 BuildRequires:	perl-Crypt-Blowfish
 BuildRequires:	perl-Crypt-CBC
