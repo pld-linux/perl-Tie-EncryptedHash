@@ -4,7 +4,6 @@
 
 %define		pdir	Tie
 %define		pnam	EncryptedHash
-%include	/usr/lib/rpm/macros.perl
 Summary:	Tie::EncryptedHash Perl module - hashes with encrypting fields
 Summary(pl.UTF-8):	Moduł Perla Tie::EncryptedHash - hasze z kodowanymi polami
 Name:		perl-Tie-EncryptedHash
